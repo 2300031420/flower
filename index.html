@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Romantic Flower</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+  
+    #love-message {
+      position: absolute;
+      bottom: 10%; /* Adjusted for more consistent appearance */
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 8vw; /* Responsive font size */
+      color: #ff69b4;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff1493;
+      animation: fadeInFloat 5s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 10;
+      text-align: center;
+      white-space: nowrap;
+    }
+  
+    @keyframes fadeInFloat {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(-50%, -10px);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+      }
+    }
+  
+    /* Optional: Fine-tune for very small or very large screens */
+    @media (max-width: 480px) {
+      #love-message {
+        font-size: 10vw;
+      }
+    }
+  
+    @media (min-width: 1200px) {
+      #love-message {
+        font-size: 5vw;
+      }
+    }
+  </style>
+  
+
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <script type="module" src="/src/main.js"></script>
+  <div id="love-message">With all my love 💖</div>
+</body>
+</html>

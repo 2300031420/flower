@@ -1,0 +1,9 @@
+dist/
+node_modules/
+*.DS_Store
+*.log
+*.zip
+*.blend1
+*.bak
+.vscode/
+.env
